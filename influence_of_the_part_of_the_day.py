@@ -3,7 +3,7 @@ import itertools
 
 import matplotlib.pyplot as plt
 
-DIAGRAM_TITLE = "Влияние дня недели на вероятность отказа от корзины"
+DIAGRAM_TITLE = "Влияние времени суток на отказ"
 HORIZONTAL_TITLE = "Колиество отказов"
 HORIZONTAL_TITLE_BASED_ON_PERCENTAGE = " Вероятность отказа"
 VERTICAL_TITLE = "Период дня"
