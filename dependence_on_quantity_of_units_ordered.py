@@ -13,10 +13,12 @@ NAME_FOR_LINEPLOT = "graphs/dependence_on_quantity_of_units_ordered_lineplot"
 IMAGE_FORMAT = "png"
 COLOR = "#B0E0E6"
 
+
 def set_diagram_titles(ax):
     ax.set_title(DIAGRAM_TITLE)
     ax.set_xlabel(HORIZONTAL_TITLE)
     ax.set_ylabel(VERTICAL_TITLE)
+
 
 def scatterplot(x_data, y_data):
     _, ax = plt.subplots()
@@ -25,12 +27,14 @@ def scatterplot(x_data, y_data):
     set_diagram_titles(ax)
     plt.savefig("{}".format(NAME_FOR_SCATTERPLOT), fmt=IMAGE_FORMAT)
 
+
 def lineplot(x_data, y_data):
     _, ax = plt.subplots()
     ax.plot(x_data, y_data, lw=2, color=COLOR)
 
     set_diagram_titles(ax)
     plt.savefig("{}".format(NAME_FOR_LINEPLOT), fmt=IMAGE_FORMAT)
+
 
 def csv_reader(file_obj):
     reader = csv.reader(file_obj, delimiter=" ")
@@ -52,6 +56,7 @@ def csv_reader(file_obj):
 
     lineplot(cancel_flags, list(order_data))
     scatterplot(cancel_flags, list(order_data))
+
 
 if __name__ == "__main__":
     with open(PATH_TO_DATA, "r", encoding="ISO-8859-1") as f_obj:
